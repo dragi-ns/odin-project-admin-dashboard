@@ -7,7 +7,8 @@
     <title>Admin Dashboard | Odin project</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital@0;1&display=swap" rel="stylesheet"> 
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet"> 
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/@mdi/font@6.5.95/css/materialdesignicons.min.css">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -15,7 +16,76 @@
         HEADER BUDDY
     </header>
     <aside class="primary-sidebar">
-        SIDEBAR STUFF
+        <div class="sidebar-brand">
+            <a href="#">
+                <span class="mdi mdi-view-dashboard mdi-48px brand-icon"></span>
+                <span class="brand-text">Dashboard</span>
+            </a>
+        </div>
+
+        <nav class="sidebar-navigation">
+            <ul>
+                <li class="active">
+                    <a href="#">
+                        <span class="mdi mdi-home"></span>
+                        <span>Home</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <span class="mdi mdi-card-account-details"></span>
+                        <span>Profile</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <span class="mdi mdi-message-reply"></span>
+                        <span>Messages</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <span class="mdi mdi-clock-time-three"></span>
+                        <span>History</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <span class="mdi mdi-file-multiple"></span>
+                        <span>Tasks</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <span class="mdi mdi-account-group"></span>
+                        <span>Communities</span>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+
+        <nav class="sidebar-navigation">
+            <ul>
+                <li>
+                    <a href="#">
+                        <span class="mdi mdi-cog"></span>
+                        <span>Settings</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <span class="mdi mdi-message-question"></span>
+                        <span>Support</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <span class="mdi mdi-shield-check"></span>
+                        <span>Privacy</span>
+                    </a>
+                </li>
+            </ul>
+        </nav>
     </aside>
     <main>
         MAIN CONTENT
