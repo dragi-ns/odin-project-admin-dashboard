@@ -3,8 +3,8 @@
 /* ------------------- */
 
 :root {
-    --clr-primary: 201, 79%, 46%;
-    --clr-accent: 42, 87%, 55%;
+    --clr-primary: 201 79% 46%;
+    --clr-accent: 42 87% 55%;
     --clr-dark: 0 0% 0%;
     --clr-white: 0 0% 100%;
 }
@@ -100,7 +100,7 @@ body {
     background-color: hsl( var(--clr-dark) / .15 );
 }
 
-.primary-header .user-avatar-container {
+.user-avatar-container {
     background-color: hsl( var(--clr-accent) );
     border-radius: 50%;
     aspect-ratio: 1;
@@ -109,11 +109,11 @@ body {
     align-items: center;   
 }
 
-.primary-header .user-avatar-container-small {
+.user-avatar-container-small {
     width: 48px;
 }
 
-.primary-header .user-avatar-small {
+.user-avatar-small {
     width: 36px;
 }
 
@@ -163,7 +163,7 @@ body {
     border: 0;
     background-color: hsl( var(--clr-primary) );
     color: hsl( var(--clr-white) );
-    padding: 10px 0;
+    padding: 10px 15px;
     border-radius: 25px;
     font-weight: bold;
     cursor: pointer;
@@ -171,8 +171,6 @@ body {
 }
 
 .primary-header .user-actions-container .btn:hover {
-    /* This below doesn't work... */
-    /* background-color: hsl( var(--clr-dark) / .5 ); */
     background-color: #116593;
 }
 
@@ -246,6 +244,127 @@ body {
 /* -------------------------- */
 
 main {
+    padding-bottom: 50px;
     grid-column: 2 / 3;
     grid-row: 2 / 3;
+    background-color: #e2e8f0;
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+}
+
+main section h2 {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+}
+
+.projects-container {
+    padding: 20px;
+    grid-row: span 2;
+}
+
+.projects {
+    display: grid;
+    gap: 25px;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+}
+
+.projects .project {
+    display: grid;
+    row-gap: 20px;
+    grid-template-rows: 1fr min-content;
+    padding: 20px 15px;
+    border-radius: 6px;
+    background-color: hsl( var(--clr-white) );
+    border-left: 7px solid hsl( var(--clr-accent) );
+    box-shadow: hsl( var(--clr-dark) / .15 ) 2.4px 2.4px 3.2px;
+}
+
+.projects .project-title {
+    font-weight: bold;
+    font-size: 1.1rem;
+}
+
+.projects .project-description {
+    color: #636363;
+}
+
+.projects .project-actions {
+    display: grid;
+    grid-template-columns: repeat(3, auto);
+    justify-content: end;
+    align-items: center;
+    column-gap: 22px;
+}
+
+.projects .project-actions > div {
+    padding: 8px;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background-color 250ms ease-in-out;
+}
+
+.projects .project-actions > div:hover {
+    background-color: hsl( var(--clr-dark) / .15 );
+}
+
+.side-container {
+    display: grid;
+    grid-template-rows: min-content;
+    grid-row: span 2;
+}
+
+.announcements-container {
+    padding: 20px 50px 0 0;
+}
+
+.announcements {
+    background-color: hsl( var(--clr-white) );
+    padding: 25px 35px;
+    border-radius: 6px;
+    box-shadow: hsl( var(--clr-dark) / .15 ) 2.4px 2.4px 3.2px;
+}
+
+.announcements .announcement {
+    padding: 15px 5px;
+}
+
+.announcement .announcement-title {
+    font-weight: bold;
+}
+
+.announcement .announcement-description {
+    font-size: .8rem;
+    color: #636363;
+}
+
+.announcements .announcement:not(:last-child) {
+    border-bottom: 1px solid hsl( var(--clr-dark) / .25 );
+}
+
+.trending-container {
+    padding: 20px 50px 0 0;
+}
+
+.trendings {
+    padding: 15px 20px;
+    display: grid;
+    row-gap: 15px;
+    background-color: hsl( var(--clr-white) );
+    border-radius: 6px;
+    box-shadow: hsl( var(--clr-dark) / .15 ) 2.4px 2.4px 3.2px;
+}
+
+.trendings .trending {
+    display: grid;
+    column-gap: 15px;
+    grid-template-columns: min-content 1fr;
+}
+
+.trendings .trending-information {
+    display: grid;
+    font-size: .9rem;
+}
+
+.trendings .trending-information .project-name {
+    color: #636363;
 }
