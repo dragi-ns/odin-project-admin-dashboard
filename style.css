@@ -47,7 +47,7 @@ button {
 
 body {
     font-family: 'Roboto', sans-serif;
-    min-height: 100vh;
+    height: 100vh;
     display: grid;
     grid-template-columns: 1fr 5fr;
     grid-template-rows: 1fr 5fr;
@@ -63,8 +63,8 @@ body {
     column-gap: 25px;
     row-gap: 15px;
     grid-template-columns: 2fr 1fr;
-    padding: 15px 50px;
-    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+    padding: 10px 45px;
+    box-shadow: hsl( var(--clr-dark) / .15 ) 2.4px 2.4px 3.2px;
 }
 
 .primary-header .search-bar-container {
@@ -81,22 +81,22 @@ body {
     border-radius: 20px;
 }
 
-.primary-header .user-information {
+.primary-header .user-information-container {
     display: grid;
-    gap: 25px;
     grid-template-columns: repeat(3, auto);
+    gap: 30px;
     justify-content: end;
     align-items: center;
 }
 
-.primary-header .user-notifications {
+.primary-header .user-notifications-container {
     padding: 10px;
     border-radius: 50%;
     cursor: pointer;
     transition: background-color 250ms ease-in-out;
 }
 
-.primary-header .user-notifications:hover {
+.primary-header .user-notifications-container:hover {
     background-color: hsl( var(--clr-dark) / .15 );
 }
 
@@ -106,55 +106,60 @@ body {
     aspect-ratio: 1;
     display: grid;
     justify-items: center;
-    align-items: center;
+    align-items: center;   
 }
 
-.primary-header .user-information .user-avatar-container {
+.primary-header .user-avatar-container-small {
     width: 48px;
 }
 
-.primary-header .user-information .user-avatar {
-    max-width: 32px;
+.primary-header .user-avatar-small {
+    width: 36px;
 }
 
-.primary-header .user-name {
+.primary-header .user-information-container .user-name {
     font-weight: bold;
 }
 
-.primary-header .user-greeting {
+.primary-header .user-greeting-container {
     display: grid;
-    column-gap: 15px;
+    column-gap: 20px;
     grid-template-columns: min-content 1fr;
 }
 
-.primary-header .user-greeting .user-avatar-container {
-    width: 80px;
+.primary-header .user-greeting-container .user-avatar-container {
     grid-row: span 2;
     align-self: center;
 }
 
-.primary-header .user-greeting .user-avatar {
-    max-width: 64px;
+.primary-header .user-avatar-container-medium {
+    width: 80px;
 }
 
-.primary-header .user-greeting .greeting {
-    align-self: end;
+.primary-header .user-avatar-medium {
+    width: 64px;
+}
+
+.primary-header .user-greeting {
+    grid-row: span 2;
+    align-self: center;
+    display: grid;
+    grid-template-columns: 1fr;
     font-weight: bold;
 }
 
 .primary-header .user-greeting .user-handle {
-    font-weight: bold;
     font-size: 1.5rem;
 }
 
-.primary-header .user-actions {
+.primary-header .user-actions-container {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     align-items: center;
     column-gap: 25px;
 }
 
-.primary-header .user-actions button {
+.primary-header .user-actions-container .btn {
     border: 0;
     background-color: hsl( var(--clr-primary) );
     color: hsl( var(--clr-white) );
@@ -165,8 +170,10 @@ body {
     transition: background-color 250ms ease-in-out;
 }
 
-.primary-header .user-actions button:hover {
-    background-color: hsl( var(--clr-accent) );
+.primary-header .user-actions-container .btn:hover {
+    /* This below doesn't work... */
+    /* background-color: hsl( var(--clr-dark) / .5 ); */
+    background-color: #116593;
 }
 
 /* --------------------- */
